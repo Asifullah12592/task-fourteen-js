@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-14</title>
+</head>
+
+<body>
+    <h1>Assignment-14</h1>
+
+    <script>
+
+        // //====111111
+
+        function date(){
+            document.write("<br>(1)<br>"+new Date())
+        }
+        date()
+
+        //=====222222
+        ///1
+        function fullName(){
+            var firstName=prompt("Enter Your First Name")
+            var lastName=prompt("Enter Your Last Name")
+            document.write("<br><br>(2-1)<br>"+firstName+" "+lastName)
+        }
+        fullName()
+        ////2
+        // function fulName(f_Name,l_Name){
+
+        //     document.write("<br><br>(2-2)<br>"+f_Name+" "+l_Name)
+        // }
+        // fulName(prompt("Enter Your First Name "),prompt("Enter Your Last Name"))
+
+
+        //=====3333
+
+        function sum(num1,num2){
+            document.write("<br><br>(3)<br>"+num1+num2)
+
+        }
+        sum(+prompt("Enter num1 for Sum"),+prompt("Enter num2 for Sum"))
+
+        //=====4444
+
+           function operator(num1,num2,operator){
+            var num1=+prompt("Enter num 1")
+            var num2=+prompt("Enter num 2")
+            var operator =prompt("Enter the operator")
+            if(operator==="+"){
+                return num1+num2
+            }else if(operator==="*"){
+                return num1*num2
+            }else if(operator==="-"){
+                return num1-num2
+            }else if(operator==="/"){
+                return num1/num2
+            }else{
+                return "Wrong data provided."
+            }
+
+           }
+
+           var result = operator()
+           document.write("<br><br>(4)<br>Check Oprator : "+result);
+
+
+
+        //======55555
+
+        function squared(number) {
+            document.write("<br><br>(5)<br>"+ Math.pow(number, 2))
+            // console.log(""+ Math.pow(number, 2))
+        }
+        squared(5)
+
+
+        //======66666666
+
+            function factorial(a){
+                var answer = 1;
+                if(a===0 ||a===1){
+                    return answer;
+                }
+                else if(a > 1){
+                    for(var b = a; b >= 1; b--){
+                    answer =answer * b
+                }
+                return answer
+            }
+            else{
+                return "Number has to be positive."
+            }
+        }
+        var a =prompt("Enter a number")
+        answer = factorial(a)
+        document.write("<br><br>(6)<br>Factorial Nomber : "+answer);
+
+
+
+        // ======77777
+            document.write("<br>(7)<br>")
+        function starEnd(start,end){
+            for(var i = start ; i <=end ;i++){
+                document.write("<br><br>"+i)
+
+                console.log(i)
+
+            }
+        }
+        starEnd(+prompt("Enter Start Number"),+prompt("Enter End Number"))
+
+
+        // =====888888
+
+        function findHypotenuse(base,perpendicular){
+            var base = +prompt("Enter the Base value")
+            var perpendicular =+prompt("Enter the Perpendicular value")
+            var bSqr = (base * base);
+            var pSqr =(perpendicular * perpendicular);
+            var sum = (bSqr + pSqr)
+            var hypotenuse = Math.sqrt(sum)
+            return hypotenuse;
+            // console.log(hypotenuse)
+        }
+        var res =findHypotenuse()
+        document.write("<br><br>(8)<br><br> Hypotenuse value is :<b> "+res.toFixed(2)+"</b>")
+
+
+
+
+
+
+        ///=====99999
+          function areaRec(){
+            var width = +prompt("Enter the width")
+            var height = +prompt("Enter the height")
+            var area = (width*height)/2;
+            return area;
+          }
+          var ans = areaRec()
+          document.write("<br><br>(9)<br> Area of Rec"+ans)
+
+
+
+        //10,10,10,10,10
+
+
+
+        function check() {
+
+            var len = string.length;
+            for (var i = 0; i < len / 2; i++) {
+                if (string[i] != string[len - 1 - i]) {
+                    var massage = " is not a palindrome"
+                    return massage;
+                }else if ((string[i] == string[len - 1 - i])){
+                    var massage = " is a palindrome"
+                    return massage
+                }
+
+            }
+        }
+        var string = prompt("Inter a string")
+        var ans = check()
+        document.write("<br><br>(10)<br>"+string+" :<b> "+ans+"</b>")
+
+
+
+        //11,11,11,11,11
+
+
+        function upperCase(string){
+            // var string = "the quick brown fox"
+            var spl = string.split(' ');
+            var arr = []
+
+            for(var i =0 ; i < spl.length; i++){
+                arr.push(spl[i].charAt(0).toUpperCase()+spl[i].slice(1))
+
+            }
+            return arr.join(' ')
+            // console.log(arr[i]);
+
+        }
+        var result = upperCase(prompt("plz enter the text for changing first word"))
+        document.write("<br><br>(11)<br>Capabilition : "+result)
+
+
+
+        //======12,12,12,12,12
+
+
+
+
+        function longestWord(text) {
+            // var text = "The quick brown fox jumped over the lazy dog"
+            var spl = text.split(' ')
+            var sorting = spl.sort(function (a, b) { return b.length - a.length })
+            return sorting[0];
+        }
+        var ans=longestWord(prompt("Enter the text "))
+        document.write("<br><br>(12)<br>Longest Word in your text is  <b>: "+ans +"</b> ");
+        document.write("<br> And Length of this word  is  <b>: "+ans.length +"</b>");
+
+        // 12======2
+        // function string(str){
+        //     var spl=str.split(" ")
+        //     var longestWord = 0;
+        //     for(var i = 0 ; i <spl.length; i++){
+        //         if(spl[i].length > longestWord){
+        //             longestWord = spl[i].length
+        //         }
+        //     }
+        //     return longestWord;
+        // }
+        // var ans = string("The quick brown fox jumped over the lazy dog")
+        // console.log(ans);
+
+
+        //====13,13,13,13,
+
+
+
+
+
+        function char_count(str,letter){
+            var letter_count = 0;
+            for(var i =0; i < str.length;i++){
+                if(str.charAt(i)==letter){
+                    letter_count +=1;
+                }
+            }
+            return letter_count
+        }
+        var result= char_count(prompt("Enter the text"),prompt("Enter the Letter"))
+        document.write("<br><br>(13)<br>Letter_Count is <b> : "+result+"</b>")
+
+
+
+
+        //=======14,14,14,14
+
+        function calcCircumfrence(radius) {
+            var y = (Math.PI * radius) * 2;
+            return y;
+            // console.log("The circumfrence is " + y  + ".");
+        }
+        function calcArea(radius) {
+            var x = (Math.PI * radius) * radius;
+            return x;
+            // console.log("The area is " + x + ".");
+        }
+
+        var resu = calcCircumfrence(30);
+        var resul = calcArea(10);
+        document.write("<br><br>(14)<br> The circumfrence is = <b>" + resu.toFixed(3)  + "</b><br>"+"The area is = <b>" + resul.toFixed(3) + "</b>.");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
